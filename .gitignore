@@ -1,7 +1,7 @@
-# Compiled class file
+# Compiled class files
 *.class
 
-# Log file
+# Log files
 *.log
 
 # BlueJ files
@@ -19,6 +19,33 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Virtual machine crash logs
 hs_err_pid*
-replay_pid*
+
+# Maven target directory
+/target/
+
+# Gradle build directory
+/build/
+.gradle/
+
+# Excepción: incluir gradle-wrapper.jar
+!gradle-wrapper.jar
+
+# VS Code settings
+.vscode/
+
+# Eclipse/NetBeans project files
+.classpath
+.project
+.settings/
+nbproject/private/
+build/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Spring Boot specific (ignorar si contienen credenciales)
+application.properties
+application.yml
