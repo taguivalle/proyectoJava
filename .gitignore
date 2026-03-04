@@ -25,12 +25,64 @@ hs_err_pid*
 # Maven target directory
 /target/
 
-# Gradle build directory
-/build/
-.gradle/
+# -------------------------------------------------
+# 1.  Java / Maven / Gradle
+# -------------------------------------------------
+# Compilados y empaquetados
+*.class
+*.jar
+*.war
+*.ear
 
-# Excepción: incluir gradle-wrapper.jar
+# Directorios de salida
+/target/
+/build/
+/.gradle/
+
+# Maven / Gradle auxiliares
+*.log
+hs_err_pid*
+
+# Gradle Wrapper (mantener el jar, ignorar el resto)
 !gradle-wrapper.jar
+
+# -------------------------------------------------
+# 2.  IDEs
+# -------------------------------------------------
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse / NetBeans
+.classpath
+.project
+.settings/
+nbproject/private/
+build/
+
+# -------------------------------------------------
+# 3.  Node.js
+# -------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -------------------------------------------------
+# 4.  Configuración sensible
+# -------------------------------------------------
+# Si tienes versiones seguras, usa *_example.yml o *_example.properties
+application-secret.properties
+application-secret.yml
+
+# -------------------------------------------------
+# 5.  Sistema operativo
+# -------------------------------------------------
+.DS_Store
+Thumbs.db
 
 # VS Code settings
 .vscode/
@@ -47,5 +99,32 @@ build/
 Thumbs.db
 
 # Spring Boot specific (ignorar si contienen credenciales)
-application.properties
-application.yml
+# Ignorar sólo los archivos que contengan credenciales
+application-secret.properties
+application-secret.yml
+
+# Maven / Java
+/target/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+.idea/
+*.log
+.factorypath
+dependency-reduced-pom.xml
+/target/generated-sources/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
